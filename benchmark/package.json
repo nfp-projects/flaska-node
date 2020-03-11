@@ -1,0 +1,18 @@
+{
+  "name": "benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "WTFPL",
+  "dependencies": {
+    "benchmarkjs-pretty": "^2.0.0",
+    "express": "^4.17.1",
+    "koa-router": "^8.0.8"
+  }
+}
