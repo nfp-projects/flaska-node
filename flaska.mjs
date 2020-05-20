@@ -11,11 +11,11 @@ function Branch() {
 
 const __paramMapName = '__param'
 
-function BottleRouter() {
+function FlaskaRouter() {
   this._root = new Branch()
 }
 
-BottleRouter.prototype.addRoute = function(route, handler) {
+FlaskaRouter.prototype.addRoute = function(route, handler) {
   if (route[0] !== '/')
     throw new Error(`route "${route}" must start with forward slash`);
 
@@ -76,7 +76,7 @@ BottleRouter.prototype.addRoute = function(route, handler) {
   }
 }
 
-BottleRouter.prototype.match = function(url) {
+FlaskaRouter.prototype.match = function(url) {
   let branch = this._root;
   let start = 1;
   let end = 1;
@@ -120,5 +120,5 @@ BottleRouter.prototype.match = function(url) {
 }
 
 export {
-  BottleRouter,
+  FlaskaRouter,
 }

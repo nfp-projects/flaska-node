@@ -1,8 +1,8 @@
-import { BottleRouter } from '../bottle.js'
+import { FlaskaRouter } from '../flaska.mjs'
 import * as consts from './const.js'
 
-const router1 = new BottleRouter()
-const router2 = new BottleRouter()
+const router1 = new FlaskaRouter()
+const router2 = new FlaskaRouter()
 
 for (let key in consts.allRoutes) {
   router1.addRoute(consts.allRoutes[key], consts.dummy)
@@ -13,6 +13,6 @@ for (let key in consts.allManyRoutes) {
 }
 
 export {
-  router1 as bottleRouter1,
-  router2 as bottleRouter2,
+  router1 as flaskaRouter1,
+  router2 as flaskaRouter2,
 }

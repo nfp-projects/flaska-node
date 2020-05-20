@@ -1,7 +1,7 @@
 import assert from 'assert'
 import Benchmark from 'benchmarkjs-pretty'
 import { koaRouter1, koaRouter2 } from './router_koa.js'
-import { bottleRouter1, bottleRouter2 } from './router_bottle.js'
+import { flaskaRouter1, flaskaRouter2 } from './router_flaska.js'
 import { expressRouter1, expressRouter2 } from './router_express.js'
 import * as consts from './const.js'
 
@@ -25,7 +25,7 @@ function TestSmallStaticRoute() {
       assert.ok(testData.route)
     })
     .add('bottle-router', function() {
-      testData = bottleRouter1.match('/api/staff')
+      testData = flaskaRouter1.match('/api/staff')
       assert.ok(testData.handler)
     })
     .run()
@@ -50,7 +50,7 @@ function TestSmallParamRoute() {
       assert.ok(testData.route)
     })
     .add('bottle-router', function() {
-      testData = bottleRouter1.match('/api/staff/justatest')
+      testData = flaskaRouter1.match('/api/staff/justatest')
       assert.ok(testData.handler)
     })
     .run()
@@ -75,7 +75,7 @@ function TestLargeStaticRoute() {
       assert.ok(testData.route)
     })
     .add('bottle-router', function() {
-      testData = bottleRouter2.match('/api/staff')
+      testData = flaskaRouter2.match('/api/staff')
       assert.ok(testData.handler)
     })
     .run()
@@ -100,7 +100,7 @@ function TestLargeParamRoute() {
       assert.ok(testData.route)
     })
     .add('bottle-router', function() {
-      testData = bottleRouter2.match('/api/staff/justatest')
+      testData = flaskaRouter2.match('/api/staff/justatest')
       assert.ok(testData.handler)
     })
     .run()
