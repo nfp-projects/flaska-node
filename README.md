@@ -3,4 +3,4 @@ Bottle is a micro web-framework for node. It is designed to be fast, simple and 
 
 # Attention
 
-Due to many of the fallbacks and issues on github is being managed, all code and repository has been moved over to https://git.nfp.is/nfp/flaska
+Due to many of the fallbacks and issues on github is being managed, all code and repository has been moved over to https://git.nfp.is/TheThing/flaska
